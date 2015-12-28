@@ -7,7 +7,7 @@ import timber.log.Timber;
 /**
  * Created by froger_mcs on 05.11.14.
  */
-public class InstaMaterialApplication extends Application {
+public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
