@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
-    <string name="app_name">InstaMaterial</string>
+    <string name="app_name">一句</string>
+    <string name="app_title">一朵花是一個春天</string>
+    <string name="share">分享</string>
+    <string name="discover">發現</string>
+
+    <string name="add_photo">加入建議圖片</string>
+
     <plurals name="likes_count">
         <item quantity="one">%d like</item>
         <item quantity="other">%d likes</item>

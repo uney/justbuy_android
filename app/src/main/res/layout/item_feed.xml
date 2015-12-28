@@ -13,13 +13,31 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
+        <RelativeLayout
             android:id="@+id/ivUserProfile"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_feed_top" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_launcher"/>
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_color"
+                android:layout_toRightOf="@+id/profile_pic"
+                android:layout_centerVertical="true"
+                android:textSize="13sp"
+                android:text="UserName"/>
+        </RelativeLayout>
 
-        <io.github.froger.instamaterial.ui.view.SquaredFrameLayout
+
+        <com.beehivesnetwork.justword.ui.view.SquaredFrameLayout
             android:id="@+id/vImageRoot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -45,7 +63,7 @@
                 android:src="@drawable/ic_heart_outline_white"
                 android:visibility="invisible" />
 
-        </io.github.froger.instamaterial.ui.view.SquaredFrameLayout>
+        </com.beehivesnetwork.justword.ui.view.SquaredFrameLayout>
 
         <ImageView
             android:id="@+id/ivFeedBottom"
@@ -103,12 +121,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="123 likes"
-                        android:textColor="@color/text_like_counter" />
+                        android:textColor="@color/sub_color" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/text_like_counter" />
+                        android:textColor="@color/sub_color" />
                 </TextSwitcher>
             </LinearLayout>
         </LinearLayout>

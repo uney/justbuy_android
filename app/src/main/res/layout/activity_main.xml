@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v7.widget.RecyclerView
+        <com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
             android:id="@+id/rvFeed"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -36,11 +36,34 @@
             android:layout_gravity="bottom|right"
             android:layout_marginBottom="@dimen/btn_fab_margins"
             android:layout_marginRight="@dimen/btn_fab_margins"
-            android:src="@drawable/ic_instagram_white"
+            android:src="@android:drawable/btn_plus"
             app:borderWidth="0dp"
             app:elevation="6dp"
             app:pressedTranslationZ="12dp" />
 
     </android.support.design.widget.CoordinatorLayout>
+    <LinearLayout
+        android:id="@+id/loading_progress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/loading_background"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <!--<com.todddavies.components.progressbar.ProgressWheel-->
+            <!--xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/pw_spinner"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--ProgressWheel:text="loading..."-->
+            <!--ProgressWheel:textColor="#222"-->
+            <!--ProgressWheel:textSize="14sp"-->
+            <!--ProgressWheel:rimColor="#330097D6"-->
+            <!--ProgressWheel:barLength="60dp"-->
+            <!--ProgressWheel:barColor="#0097D6"-->
+            <!--ProgressWheel:barWidth="5dp"-->
+            <!--ProgressWheel:rimWidth="2dp" />-->
 
+    </LinearLayout>
 </RelativeLayout>

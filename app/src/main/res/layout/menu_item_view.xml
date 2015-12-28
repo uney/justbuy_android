@@ -4,4 +4,4 @@
     android:layout_width="?attr/actionBarSize"
     android:layout_height="?attr/actionBarSize"
     android:background="@drawable/btn_default_light"
-    android:src="@drawable/ic_inbox_white" />
+    android:src="@drawable/ic_global_menu_search" />
