@@ -43,6 +43,7 @@
         <com.beehivesnetwork.justword.ui.view.BounceScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:scrollbars="none">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,19 +81,22 @@
                                 android:textSize="14sp" />
                         </LinearLayout>
 
+                        <com.android.ex.chips.RecipientEditTextView
+                            android:id="@+id/hash_tag"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:hint="@string/input_hash_tag"
+                            android:minHeight="18dp" />
+
                         <Switch
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="16dp"
                             android:layout_marginRight="16dp"
                             android:text="@string/add_photo" />
-                        <LinearLayout
-                            android:id="@+id/tag_container"
-                            android:layout_width="match_parent"
-                            android:layout_height="15dp"
-                            android:orientation="horizontal">
 
-                        </LinearLayout>
                         <ImageView
                             android:id="@+id/ivPhoto"
                             android:layout_gravity="center"

@@ -32,5 +32,5 @@ dependencies {
     compile 'com.marshalchen.ultimaterecyclerview:library:0.3.18'
     compile 'uk.co.chrisjenx:calligraphy:2.1.0'
 //    compile 'com.github.Todd-Davies:ProgressWheel:1.0'
-    compile 'com.klinkerapps:android-chips:1.0.1@aar'
+    compile project(':chips')
 }

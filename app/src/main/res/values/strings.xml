@@ -7,6 +7,9 @@
 
     <string name="add_photo">加入建議圖片</string>
 
+    <string name="input_hash_tag">輸入#標籤</string>
+
+
     <plurals name="likes_count">
         <item quantity="one">%d like</item>
         <item quantity="other">%d likes</item>

@@ -11,10 +11,10 @@ import android.widget.ScrollView;
  */
 public class BounceScrollView extends NestedScrollView
 {
-    private static final int MAX_Y_OVERSCROLL_DISTANCE = 200;
+    private static final int MAX_Y_OVER_SCROLL_DISTANCE = 50;
 
     private Context mContext;
-    private int mMaxYOverscrollDistance;
+    private int mMaxYOverScrollDistance;
 
     public BounceScrollView(Context context)
     {
@@ -41,18 +41,16 @@ public class BounceScrollView extends NestedScrollView
     {
         //get the density of the screen and do some maths with it on the max overscroll distance
         //variable so that you get similar behaviors no matter what the screen size
-
         final DisplayMetrics metrics = mContext.getResources().getDisplayMetrics();
         final float density = metrics.density;
-
-        mMaxYOverscrollDistance = (int) (density * MAX_Y_OVERSCROLL_DISTANCE);
+        mMaxYOverScrollDistance = (int) (density * MAX_Y_OVER_SCROLL_DISTANCE);
     }
 
     @Override
     protected boolean overScrollBy(int deltaX, int deltaY, int scrollX, int scrollY, int scrollRangeX, int scrollRangeY, int maxOverScrollX, int maxOverScrollY, boolean isTouchEvent)
     {
         //This is where the magic happens, we have replaced the incoming maxOverScrollY with our own custom variable mMaxYOverscrollDistance;
-        return super.overScrollBy(deltaX, deltaY, scrollX, scrollY, scrollRangeX, scrollRangeY, maxOverScrollX, mMaxYOverscrollDistance, isTouchEvent);
+        return super.overScrollBy(deltaX, deltaY, scrollX, scrollY, scrollRangeX, scrollRangeY, maxOverScrollX, mMaxYOverScrollDistance, isTouchEvent);
     }
 
 }
