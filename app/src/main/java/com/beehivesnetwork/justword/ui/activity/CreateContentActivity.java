@@ -24,8 +24,11 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.MultiAutoCompleteTextView;
 import android.widget.ViewSwitcher;
 
+import com.android.ex.chips.RecipientEditTextView;
+import com.android.ex.chips.autocomplete.SchoolListAdapter;
 import com.beehivesnetwork.justword.R;
 import com.beehivesnetwork.justword.Utils;
 import com.beehivesnetwork.justword.ui.adapter.PhotoFiltersAdapter;
@@ -58,8 +61,12 @@ public class CreateContentActivity extends BaseActivity implements RevealBackgro
     @Bind(R.id.card_view)
     CardView card_view;
 
+    @Bind(R.id.hash_tag)
+    MultiAutoCompleteTextView hashTag;
+
     private boolean pendingIntro;
     private int currentState;
+    private SchoolListAdapter schoolListAdapter;
 
     private File photoPath;
 
@@ -76,7 +83,9 @@ public class CreateContentActivity extends BaseActivity implements RevealBackgro
         updateStatusBarColor();
         updateState(STATE_TAKE_PHOTO);
         setupRevealBackground(savedInstanceState);
-
+        schoolListAdapter = new SchoolListAdapter(this, R.layout.view_autocomplete_item);
+        hashTag.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+        hashTag.setAdapter(schoolListAdapter);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)

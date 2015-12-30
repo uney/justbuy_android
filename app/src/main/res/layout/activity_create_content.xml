@@ -81,7 +81,7 @@
                                 android:textSize="14sp" />
                         </LinearLayout>
 
-                        <com.android.ex.chips.RecipientEditTextView
+                        <MultiAutoCompleteTextView
                             android:id="@+id/hash_tag"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
