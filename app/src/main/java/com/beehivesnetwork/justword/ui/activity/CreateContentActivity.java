@@ -1,48 +1,26 @@
 package com.beehivesnetwork.justword.ui.activity;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.hardware.Camera;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
-import android.widget.ViewSwitcher;
 
-import com.android.ex.chips.RecipientEditTextView;
-import com.android.ex.chips.autocomplete.SchoolListAdapter;
+import com.beehivesnetwork.justword.ui.autocomplete.SchoolListAdapter;
 import com.beehivesnetwork.justword.R;
 import com.beehivesnetwork.justword.Utils;
-import com.beehivesnetwork.justword.ui.adapter.PhotoFiltersAdapter;
 import com.beehivesnetwork.justword.ui.view.RevealBackgroundView;
-import com.commonsware.cwac.camera.CameraHost;
-import com.commonsware.cwac.camera.CameraHostProvider;
-import com.commonsware.cwac.camera.CameraView;
-import com.commonsware.cwac.camera.PictureTransaction;
-import com.commonsware.cwac.camera.SimpleCameraHost;
 
 import java.io.File;
 
 import butterknife.Bind;
-import butterknife.OnClick;
 
 /**
  * Created by Miroslaw Stanek on 08.02.15.

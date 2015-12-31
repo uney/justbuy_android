@@ -1,4 +1,4 @@
-package com.android.ex.chips.autocomplete;
+package com.beehivesnetwork.justword.ui.autocomplete;
 
 import android.content.Context;
 import android.util.Log;
@@ -78,10 +78,10 @@ public class SchoolListAdapter extends AutoCompleteAdapter {
                 resultList = new ArrayList<String>(predsJsonArray.length());
                 for (int i = 0; i < predsJsonArray.length(); i++){
                     if(predsJsonArray.getJSONObject(i).has("name")){
-                        resultList.add(predsJsonArray.getJSONObject(i).getString("name"));
+                        resultList.add(predsJsonArray.getJSONObject(i).getString("name")+" ("+i+")");
                     }
                     if(predsJsonArray.getJSONObject(i).has("ENGLISH_NAME_EN")){
-                        resultList.add(predsJsonArray.getJSONObject(i).getString("ENGLISH_NAME_EN"));
+                        resultList.add(predsJsonArray.getJSONObject(i).getString("ENGLISH_NAME_EN")+" ("+i+")");
                     }
                 }
             }
